@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include <iomanip>
-#include <time.h>
+#include <cstdlib>
 
 using namespace std;
 
@@ -78,9 +78,7 @@ void Print(int** a, const int k, const int n, int i, int j)
 int Part1_Count(int** a, const int k, const int n, int i, int j, int& count)
 {
 	if (a[i][j] == 0)
-	{
 		count++;
-	}
 	if (j < n - 1)
 		return Part1_Count(a, k, n, i, j + 1, count);
 	else
